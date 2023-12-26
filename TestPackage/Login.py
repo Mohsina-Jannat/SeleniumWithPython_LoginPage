@@ -25,8 +25,9 @@ time.sleep(5)
 
 getUrl = driver.current_url
 
-if getUrl == "https://www.sailor.clothing/profile":
-    print("User logged in successfully")
+expectedUrl = "https://www.sailor.clothing/profile"
+
+assert getUrl == expectedUrl
 
 header = driver.find_element(By.XPATH, "/html/body/div/main/section[2]/div/div/div[2]/div/div/fieldset/legend").text
 
